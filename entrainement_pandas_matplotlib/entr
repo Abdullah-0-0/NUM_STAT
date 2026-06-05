@@ -1,0 +1,58 @@
+#Charger le fichier avec pandas
+import pandas as pd
+import matplotlib.pyplot as plt 
+chemin_salaire = r"C:\Users\chams\Documents\IUT\PC IUT\Documents\Documents\NUM_STAT\commune\Emplois_salaries.csv"
+chemin_code_insee = r"C:\Users\chams\Documents\IUT\PC IUT\Documents\Documents\NUM_STAT\commune\RGC_2013.csv"
+data_salaire = pd.read_csv(chemin_salaire,sep=";")
+data_code_insee = pd.read_csv(chemin_code_insee,sep=";")
+#les 5 premières lignes
+print(data_code_insee.head())
+#les colonnes
+print(data_code_insee.columns)
+#la taille du dataframe
+print("\ndimensions :", data_code_insee.shape)
+#la commune la plus peuplée
+print("la commune la plus peuplée avec :",data_code_insee["POPU"].max(),"d'habitantes")
+#la population moyenne
+print("la population moyenne: ",data_code_insee["POPU"].mean())
+#la surface max
+print("la surface max " ,data_code_insee["SURFACE"].max())
+
+data_code_insee.columns
+
+
+population_total = data_code_insee["POPU"].sum()
+plt.hist(data_code_insee["POPU"])
+#Charger le fichier avec pandas
+import pandas as pd
+import matplotlib.pyplot as plt 
+chemin_salaire = r"C:\Users\chams\Documents\IUT\PC IUT\Documents\Documents\NUM_STAT\commune\Emplois_salaries.csv"
+chemin_code_insee = r"C:\Users\chams\Documents\IUT\PC IUT\Documents\Documents\NUM_STAT\commune\RGC_2013.csv"
+data_salaire = pd.read_csv(chemin_salaire,sep=";")
+data_code_insee = pd.read_csv(chemin_code_insee,sep=";")
+#les 5 premières lignes
+print(data_code_insee.head())
+#les colonnes
+print(data_code_insee.columns)
+#la taille du dataframe
+print("\ndimensions :", data_code_insee.shape)
+#la commune la plus peuplée
+print("la commune la plus peuplée avec :",data_code_insee["POPU"].max(),"d'habitantes")
+#la population moyenne
+print("la population moyenne: ",data_code_insee["POPU"].mean())
+#la surface max
+print("la surface max " ,data_code_insee["SURFACE"].max())
+
+data_code_insee.columns
+
+
+population_total = data_code_insee["POPU"].sum()
+plt.hist(data_code_insee["POPU"], bins=50)
+
+plt.xlim(0, 10000)
+
+plt.title("Distribution des populations")
+plt.xlabel("Population")
+plt.ylabel("Nombre de communes")
+
+plt.show()
