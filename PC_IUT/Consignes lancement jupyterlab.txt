@@ -1,0 +1,13 @@
+Placez le notebook dans le répertoire à votre nom dans Devoirs
+
+Dans le terminal Ubuntu, tapez:
+
+$ jupyter-notebook --ip 172.21.180.254
+
+Vous devez voir un lien comme ci dessous dans le terminal:
+
+172.21.180.254:8888/?token=****************************
+
+Clique droit sur ce lien et 'Open link'
+
+Firefox se lance avec le notebook.
